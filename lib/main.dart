@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'features/introduction/presentaion/views/introduction_view.dart';
+
 void main() {
   runApp(const MainApp());
 }
@@ -9,12 +11,16 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          primary: const Color(0xFF004cff),
+          seedColor: Colors.blue,
+          surface: Colors.white,
         ),
       ),
+      home: const IntroductionView(),
     );
   }
 }
