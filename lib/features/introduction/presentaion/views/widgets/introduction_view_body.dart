@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/utils/app_styles.dart';
+import 'package:flutter_application2/core/utils/assets.dart';
 import 'package:flutter_application2/core/widgets/custom_buttons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -39,7 +40,7 @@ class IntroductionViewBody extends StatelessWidget {
               ),
               child: Center(
                   child: Image.asset(
-                "assets/images/ShopSageLogo.png",
+                AssetsData.logo,
                 width: 100,
                 height: 100,
               )),
@@ -62,7 +63,9 @@ class IntroductionViewBody extends StatelessWidget {
             ),
             const IntroductionViewDescription(),
             const Spacer(),
-            const CustomFilledButton(),
+            const CustomFilledButton(
+              text: "Let's get started",
+            ),
             const SizedBox(
               height: 24,
             ),

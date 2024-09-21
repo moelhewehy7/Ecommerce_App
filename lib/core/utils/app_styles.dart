@@ -16,11 +16,11 @@ class AppStyles {
     fontWeight: FontWeight.w300,
     color: Color(0xff202020),
   );
-  static const TextStyle styleNunitoSansLight22 = TextStyle(
+  static const TextStyle styleNunitoSansLight16 = TextStyle(
     fontFamily: "Nunito Sans",
-    fontSize: 22,
+    fontSize: 16,
     fontWeight: FontWeight.w300,
-    color: Color(0xfff3f3f3),
+    // color: Color(0xfff3f3f3),
     height: 31 / 22,
   );
   static const TextStyle styleNunitoSansLight15 = TextStyle(
@@ -53,10 +53,10 @@ class AppStyles {
   );
   static const TextStyle stylePoppinsMedium20 = TextStyle(
     fontFamily: "Poppins",
-    fontSize: 13.834808349609375,
+    fontSize: 20,
     fontWeight: FontWeight.w500,
     color: Color(0xffd2d2d2),
-    height: 19 / 13.834808349609375,
+    height: 19 / 20,
   );
   static const TextStyle stylePoppinsMedium14 = TextStyle(
     fontFamily: "Poppins",
