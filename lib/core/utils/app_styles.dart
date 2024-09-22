@@ -14,20 +14,17 @@ class AppStyles {
     fontFamily: "Nunito Sans",
     fontSize: 19,
     fontWeight: FontWeight.w300,
-    color: Color(0xff202020),
   );
-  static const TextStyle styleNunitoSansLight16 = TextStyle(
+  static const TextStyle styleNunitoSansMedium16 = TextStyle(
     fontFamily: "Nunito Sans",
     fontSize: 16,
-    fontWeight: FontWeight.w300,
-    // color: Color(0xfff3f3f3),
+    fontWeight: FontWeight.w400,
     height: 31 / 22,
   );
   static const TextStyle styleNunitoSansLight15 = TextStyle(
     fontFamily: "Nunito Sans",
     fontSize: 15,
     fontWeight: FontWeight.w300,
-    color: Color(0xff202020),
     height: 31 / 22,
   );
   static const TextStyle styleRalewayBold17 = TextStyle(
@@ -44,12 +41,11 @@ class AppStyles {
     color: Color(0xff202020),
     height: 108 / 50,
   );
-  static const TextStyle styleRalewayMedium52 = TextStyle(
+  static const TextStyle styleRalewayMedium45 = TextStyle(
     fontFamily: "Raleway",
-    fontSize: 52,
+    fontSize: 45,
     fontWeight: FontWeight.w500,
-    color: Color(0xff202020),
-    height: 61 / 52,
+    height: 61 / 45,
   );
   static const TextStyle stylePoppinsMedium20 = TextStyle(
     fontFamily: "Poppins",
@@ -62,7 +58,6 @@ class AppStyles {
     fontFamily: "Poppins",
     fontSize: 14,
     fontWeight: FontWeight.w500,
-    color: Color(0xffd2d2d2),
     height: 19 / 14,
   );
   static const TextStyle styleRalewayBold14 = TextStyle(
@@ -118,7 +113,6 @@ class AppStyles {
     fontFamily: "Raleway",
     fontSize: 28,
     fontWeight: FontWeight.w700,
-    color: Color(0xff202020),
     height: 36 / 28,
   );
   static const TextStyle styleRalewayExtraBold20 = TextStyle(

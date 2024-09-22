@@ -31,7 +31,10 @@ class IntroductionViewBody extends StatelessWidget {
                 shape: BoxShape.circle, // Makes the container circular
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
+                    color: Theme.of(context)
+                        .colorScheme
+                        .onSurface
+                        .withOpacity(0.5),
                     spreadRadius: 2,
                     blurRadius: 5,
                     offset: const Offset(0, 3),
@@ -51,11 +54,12 @@ class IntroductionViewBody extends StatelessWidget {
             RichText(
                 text: TextSpan(
                     text: "Shop",
-                    style: AppStyles.styleRalewayMedium52,
+                    style: AppStyles.styleRalewayMedium45.copyWith(
+                        color: Theme.of(context).colorScheme.onSurface),
                     children: [
                   TextSpan(
                       text: "Sage",
-                      style: AppStyles.styleRalewayMedium52
+                      style: AppStyles.styleRalewayMedium45
                           .copyWith(color: Color(0xFF28ddff))),
                 ])),
             const SizedBox(
@@ -72,9 +76,11 @@ class IntroductionViewBody extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
+                Text(
                   "I already have an account",
-                  style: AppStyles.styleNunitoSansLight15,
+                  style: AppStyles.styleNunitoSansLight15.copyWith(
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
                   textAlign: TextAlign.left,
                 ),
                 const SizedBox(

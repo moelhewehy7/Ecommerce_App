@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/utils/app_styles.dart';
+import 'package:icons_plus/icons_plus.dart';
 
 class CustomFilledButton extends StatelessWidget {
   const CustomFilledButton({
@@ -22,7 +23,7 @@ class CustomFilledButton extends StatelessWidget {
           onPressed: () {},
           child: Padding(
             padding: const EdgeInsets.only(top: 13, bottom: 10),
-            child: Text(text, style: AppStyles.styleNunitoSansLight16),
+            child: Text(text, style: AppStyles.styleNunitoSansMedium16),
           )),
     );
   }
@@ -49,8 +50,34 @@ class CustomOutLinedButton extends StatelessWidget {
           onPressed: () {},
           child: Padding(
             padding: const EdgeInsets.only(top: 13, bottom: 10),
-            child: Text(text, style: Theme.of(context).textTheme.bodyMedium),
+            child: Text(text,
+                style: AppStyles.styleNunitoSansMedium16
+                    .copyWith(color: Theme.of(context).colorScheme.onSurface)),
           )),
+    );
+  }
+}
+
+class CustomPlatformButton extends StatelessWidget {
+  const CustomPlatformButton({
+    super.key,
+    required this.brand,
+  });
+  final String brand;
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 55,
+      width: 55,
+      child: IconButton(
+        style: IconButton.styleFrom(
+            shape: const CircleBorder(side: BorderSide(color: Colors.grey))),
+        onPressed: () {},
+        icon: Brand(
+          brand,
+          size: 28,
+        ),
+      ),
     );
   }
 }
