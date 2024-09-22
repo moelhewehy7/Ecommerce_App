@@ -23,7 +23,9 @@ class CustomFilledButton extends StatelessWidget {
           onPressed: () {},
           child: Padding(
             padding: const EdgeInsets.only(top: 13, bottom: 10),
-            child: Text(text, style: AppStyles.styleNunitoSansMedium16),
+            child: Text(text,
+                style: AppStyles.styleNunitoSansMedium20.copyWith(
+                    color: Theme.of(context).colorScheme.onSecondary)),
           )),
     );
   }
@@ -51,8 +53,8 @@ class CustomOutLinedButton extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(top: 13, bottom: 10),
             child: Text(text,
-                style: AppStyles.styleNunitoSansMedium16
-                    .copyWith(color: Theme.of(context).colorScheme.onSurface)),
+                style: AppStyles.styleNunitoSansMedium20
+                    .copyWith(color: Theme.of(context).colorScheme.secondary)),
           )),
     );
   }

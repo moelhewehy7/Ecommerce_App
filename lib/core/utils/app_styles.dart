@@ -15,17 +15,16 @@ class AppStyles {
     fontSize: 19,
     fontWeight: FontWeight.w300,
   );
-  static const TextStyle styleNunitoSansMedium16 = TextStyle(
+  static const TextStyle styleNunitoSansMedium20 = TextStyle(
     fontFamily: "Nunito Sans",
-    fontSize: 16,
-    fontWeight: FontWeight.w400,
-    height: 31 / 22,
+    fontSize: 20,
+    fontWeight: FontWeight.w500,
   );
-  static const TextStyle styleNunitoSansLight15 = TextStyle(
+  static const TextStyle styleNunitoSansRegular15 = TextStyle(
     fontFamily: "Nunito Sans",
     fontSize: 15,
-    fontWeight: FontWeight.w300,
-    height: 31 / 22,
+    fontWeight: FontWeight.w400,
+    height: 26 / 15,
   );
   static const TextStyle styleRalewayBold17 = TextStyle(
     fontFamily: "Raleway",
