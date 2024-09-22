@@ -6,25 +6,24 @@ class CustomFilledButton extends StatelessWidget {
   const CustomFilledButton({
     required this.text,
     super.key,
+    required this.onPressed,
   });
   final String text;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       child: FilledButton(
-          style: ButtonStyle(
-            shape: WidgetStatePropertyAll<RoundedRectangleBorder>(
-              RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
-              ),
-            ),
-          ),
-          onPressed: () {},
+          style: FilledButton.styleFrom(
+              shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(15)),
+          )),
+          onPressed: onPressed,
           child: Padding(
             padding: const EdgeInsets.only(top: 13, bottom: 10),
             child: Text(text,
-                style: AppStyles.styleNunitoSansMedium20.copyWith(
+                style: AppStyles.styleNunitoSansMedium19.copyWith(
                     color: Theme.of(context).colorScheme.onSecondary)),
           )),
     );
@@ -34,8 +33,10 @@ class CustomFilledButton extends StatelessWidget {
 class CustomOutLinedButton extends StatelessWidget {
   const CustomOutLinedButton({
     required this.text,
+    required this.onPressed,
     super.key,
   });
+  final void Function()? onPressed;
   final String text;
   @override
   Widget build(BuildContext context) {
@@ -49,11 +50,11 @@ class CustomOutLinedButton extends StatelessWidget {
               ),
             ),
           ),
-          onPressed: () {},
+          onPressed: onPressed,
           child: Padding(
             padding: const EdgeInsets.only(top: 13, bottom: 10),
             child: Text(text,
-                style: AppStyles.styleNunitoSansMedium20
+                style: AppStyles.styleNunitoSansMedium19
                     .copyWith(color: Theme.of(context).colorScheme.secondary)),
           )),
     );

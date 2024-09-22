@@ -15,9 +15,9 @@ class AppStyles {
     fontSize: 19,
     fontWeight: FontWeight.w300,
   );
-  static const TextStyle styleNunitoSansMedium20 = TextStyle(
+  static const TextStyle styleNunitoSansMedium19 = TextStyle(
     fontFamily: "Nunito Sans",
-    fontSize: 20,
+    fontSize: 19,
     fontWeight: FontWeight.w500,
   );
   static const TextStyle styleNunitoSansRegular15 = TextStyle(

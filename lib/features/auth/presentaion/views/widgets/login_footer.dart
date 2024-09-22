@@ -3,8 +3,8 @@ import 'package:flutter_application2/core/utils/app_styles.dart';
 import 'package:flutter_application2/core/widgets/custom_buttons.dart';
 import 'package:icons_plus/icons_plus.dart';
 
-class Footer extends StatelessWidget {
-  const Footer({
+class LoginFooter extends StatelessWidget {
+  const LoginFooter({
     super.key,
   });
 

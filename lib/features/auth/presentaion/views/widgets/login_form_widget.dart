@@ -3,9 +3,11 @@ import 'package:flutter_application2/core/utils/app_styles.dart';
 
 import 'package:flutter_application2/core/widgets/custom_buttons.dart';
 import 'package:flutter_application2/core/widgets/text_fields.dart';
+import 'package:flutter_application2/features/auth/presentaion/views/signup_view.dart';
+import 'package:icons_plus/icons_plus.dart';
 
-class FormWidget extends StatelessWidget {
-  const FormWidget({
+class LoginFormWidget extends StatelessWidget {
+  const LoginFormWidget({
     super.key,
   });
 
@@ -14,7 +16,10 @@ class FormWidget extends StatelessWidget {
     return Form(
         child: Column(
       children: [
-        const BasicTextForm(),
+        const BasicTextForm(
+          text: "E-Mail",
+          icon: Iconsax.direct_right_outline,
+        ),
         const SizedBox(
           height: 8,
         ),
@@ -40,11 +45,16 @@ class FormWidget extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        const CustomFilledButton(text: "Login"),
+        CustomFilledButton(onPressed: () {}, text: "Login"),
         const SizedBox(
           height: 12,
         ),
-        const CustomOutLinedButton(text: "Create account"),
+        CustomOutLinedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const SignUpView()));
+            },
+            text: "Create account"),
       ],
     ));
   }

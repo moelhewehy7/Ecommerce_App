@@ -11,11 +11,15 @@ class PassWordTextForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 20),
+        prefixIcon: const Icon(Iconsax.password_check_outline,
+            color: Color(0xFF717171)),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         hintText: "Password",
         suffixIcon: IconButton(
             onPressed: () {}, icon: const Icon(Iconsax.eye_slash_outline)),
-        hintStyle: AppStyles.stylePoppinsMedium14.copyWith(color: Colors.grey),
+        hintStyle: AppStyles.stylePoppinsMedium14
+            .copyWith(color: const Color(0xFF717171)),
         filled: true,
         border: OutlineInputBorder(
             borderSide: BorderSide.none,
@@ -28,15 +32,21 @@ class PassWordTextForm extends StatelessWidget {
 class BasicTextForm extends StatelessWidget {
   const BasicTextForm({
     super.key,
+    required this.text,
+    required this.icon,
   });
-
+  final String text;
+  final IconData icon;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 20),
-        hintText: "Email",
-        hintStyle: AppStyles.stylePoppinsMedium14.copyWith(color: Colors.grey),
+        prefixIcon: Icon(icon, color: const Color(0xFF717171)),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        hintText: text,
+        hintStyle: AppStyles.stylePoppinsMedium14
+            .copyWith(color: const Color(0xFF717171)),
         filled: true,
         border: OutlineInputBorder(
             borderSide: BorderSide.none,

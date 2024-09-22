@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application2/features/introduction/presentaion/views/introduction_view.dart';
 
-import 'features/auth/presentaion/views/login_view.dart';
+import 'package:flutter_application2/features/introduction/presentaion/views/introduction_view.dart';
 
 void main() {
   runApp(const MainApp());
@@ -15,6 +14,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       darkTheme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
+            onTertiary: Colors.blue,
             onSecondary: Colors.black,
             secondary: Colors.white,
             seedColor: Colors.blue,
@@ -24,11 +24,11 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          secondary: const Color(0xff202020),
-          surface: Colors.white,
-          primary: const Color(0xFF004cff),
-          seedColor: Colors.blue,
-        ),
+            secondary: const Color.fromARGB(255, 0, 0, 0),
+            surface: Colors.white,
+            primary: const Color(0xFF004cff),
+            seedColor: Colors.blue,
+            onTertiary: Colors.blue),
       ),
       home: const IntroductionView(),
     );

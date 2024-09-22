@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/widgets/custom_buttons.dart';
+import 'package:flutter_application2/features/auth/presentaion/views/login_view.dart';
+import 'package:flutter_application2/features/auth/presentaion/views/signup_view.dart';
 
 import '../../../../../core/utils/app_styles.dart';
 
@@ -12,7 +14,11 @@ class IntroductionFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const CustomFilledButton(
+        CustomFilledButton(
+          onPressed: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const SignUpView()));
+          },
           text: "Let's get started",
         ),
         const SizedBox(
@@ -32,7 +38,11 @@ class IntroductionFooter extends StatelessWidget {
               width: 16,
             ),
             IconButton.filled(
-                onPressed: () {}, icon: const Icon(Icons.arrow_forward))
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const LoginView()));
+                },
+                icon: const Icon(Icons.arrow_forward))
           ],
         ),
       ],
