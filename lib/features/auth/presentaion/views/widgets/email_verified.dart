@@ -18,7 +18,7 @@ class EmailVerified extends StatelessWidget {
         child: Column(
           children: [
             SvgPicture.asset(
-              AssetsData.verifyEmail,
+              AssetsData.emailVerifyed,
               height: 300,
             ),
             const Text("Your account successfully created!",

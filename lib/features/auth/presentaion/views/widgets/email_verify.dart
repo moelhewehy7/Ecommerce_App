@@ -19,7 +19,7 @@ class EmailVerify extends StatelessWidget {
         child: Column(
           children: [
             SvgPicture.asset(
-              AssetsData.verifyEmail,
+              AssetsData.emailVerify,
               height: 300,
             ),
             const Text("Verify your email address!",
