@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_application2/features/introduction/presentaion/views/introduction_view.dart';
 
+import 'features/auth/presentaion/views/widgets/email_verify.dart';
+
 void main() {
   runApp(const MainApp());
 }
@@ -30,7 +32,7 @@ class MainApp extends StatelessWidget {
             seedColor: Colors.blue,
             onTertiary: Colors.blue),
       ),
-      home: const IntroductionView(),
+      home: const EmailVerify(),
     );
   }
 }
