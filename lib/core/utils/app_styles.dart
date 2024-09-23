@@ -30,7 +30,6 @@ class AppStyles {
     fontFamily: "Raleway",
     fontSize: 17,
     fontWeight: FontWeight.w700,
-    color: Color(0xff202020),
     height: 21 / 17,
   );
   static const TextStyle styleRalewayBold58 = TextStyle(

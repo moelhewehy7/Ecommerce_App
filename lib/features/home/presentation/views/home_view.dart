@@ -1,54 +1,53 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application2/core/utils/app_styles.dart';
 import 'package:flutter_application2/core/widgets/custom_cerved_edges.dart';
+import 'package:flutter_application2/core/widgets/custom_curved_widget.dart';
+import 'package:icons_plus/icons_plus.dart';
+
+import '../../../../core/widgets/custom_app_bar.dart';
+import '../../../../core/widgets/custom_cart_counter.dart';
+import 'widgets/custom_circular_container.dart';
+import 'widgets/home_view_header.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          ClipPath(
-            clipper: CustomCervedEdges(),
-            child: Container(
-              // padding: EdgeInsets.zero,
-              height: 400,
-              color: Theme.of(context).colorScheme.primary,
-              child: Stack(
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            HomeViewHeader(
+              child: Column(
                 children: [
-                  Positioned(
-                      top: -150,
-                      right: -250,
-                      child:
-                          CustomCircularContainer()), // if we wanna go up we need to use - and right - and the rest is the oppostie
-                  Positioned(
-                      top: 100, right: -300, child: CustomCircularContainer()),
+                  CustomAppBar(
+                      title: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Good day for shopping",
+                              style: AppStyles.styleNunitoSansRegular15
+                                  .copyWith(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .surface)),
+                          Text("Mohamed elhewehy",
+                              style: AppStyles.styleRalewayBold17.copyWith(
+                                  color:
+                                      Theme.of(context).colorScheme.surface)),
+                        ],
+                      ),
+                      actions: [
+                        CustomCartCounter(),
+                      ])
                 ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
-    );
-  }
-}
-
-class CustomCircularContainer extends StatelessWidget {
-  const CustomCircularContainer({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 400,
-      width: 400,
-      decoration: ShapeDecoration(
-          color: const Color.fromARGB(25, 255, 255, 255),
-          shape: CircleBorder()),
     );
   }
 }
