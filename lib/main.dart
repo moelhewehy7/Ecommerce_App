@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application2/features/bottom_navigation_bar.dart';
 
 import 'package:flutter_application2/features/introduction/presentaion/views/introduction_view.dart';
 
@@ -26,13 +27,13 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-            secondary: const Color.fromARGB(255, 0, 0, 0),
+            secondary: const Color(0xFF000000),
             surface: Colors.white,
             primary: const Color(0xFF004cff),
             seedColor: Colors.blue,
             onTertiary: Colors.blue),
       ),
-      home: const EmailVerify(),
+      home: const BottomNavigationBarMenu(),
     );
   }
 }

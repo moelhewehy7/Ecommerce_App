@@ -1,0 +1,69 @@
+import 'package:flutter/material.dart';
+
+import 'package:icons_plus/icons_plus.dart';
+
+class BottomNavigationBarMenu extends StatefulWidget {
+  const BottomNavigationBarMenu({super.key});
+
+  @override
+  State<BottomNavigationBarMenu> createState() =>
+      _BottomNavigationBarMenuState();
+}
+
+class _BottomNavigationBarMenuState extends State<BottomNavigationBarMenu> {
+  int _selectedIndex = 0;
+  List<Widget> pages = [
+    Container(
+      color: Colors.red,
+    ),
+    Container(
+      color: Colors.green,
+    ),
+    Container(
+      color: Colors.blue,
+    ),
+    Container(
+      color: Colors.yellow,
+    )
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body:
+            pages[_selectedIndex], // Displaying the current page based on index
+        bottomNavigationBar: NavigationBar(
+            elevation: 0,
+            selectedIndex: _selectedIndex,
+            onDestinationSelected: (value) {
+              setState(() {
+                _selectedIndex = value;
+              });
+            },
+            destinations: const [
+              NavigationDestination(
+                selectedIcon: Icon(Iconsax.home_1_bold),
+                icon: Icon(Iconsax.home_1_outline),
+                label: "Home",
+              ),
+              NavigationDestination(
+                selectedIcon: Icon(
+                  Iconsax.shop_bold,
+                ),
+                icon: Icon(
+                  Iconsax.shop_outline,
+                ),
+                label: "Store",
+              ),
+              NavigationDestination(
+                selectedIcon: Icon(Iconsax.heart_bold),
+                icon: Icon(Iconsax.heart_outline),
+                label: "Whishlist",
+              ),
+              NavigationDestination(
+                selectedIcon: Icon(Iconsax.user_bold),
+                icon: Icon(Iconsax.user_outline),
+                label: "Profile",
+              ),
+            ]));
+  }
+}
