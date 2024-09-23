@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/utils/app_styles.dart';
 
-import 'package:flutter_application2/features/auth/presentaion/views/widgets/login_footer.dart';
-import 'package:flutter_application2/features/auth/presentaion/views/widgets/signup_form_widget.dart';
+import 'package:flutter_application2/features/auth/presentation/views/widgets/login_footer.dart';
+import 'package:flutter_application2/features/auth/presentation/views/widgets/signup_form_widget.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/widgets/text_fields.dart';
-import 'package:flutter_application2/features/auth/presentaion/views/widgets/email_verify.dart';
+import 'package:flutter_application2/features/auth/presentation/views/widgets/email_verify.dart';
 
 import 'package:icons_plus/icons_plus.dart';
 

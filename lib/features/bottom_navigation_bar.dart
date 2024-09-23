@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application2/features/home/presentation/views/home_view.dart';
 
 import 'package:icons_plus/icons_plus.dart';
 
@@ -13,9 +14,7 @@ class BottomNavigationBarMenu extends StatefulWidget {
 class _BottomNavigationBarMenuState extends State<BottomNavigationBarMenu> {
   int _selectedIndex = 0;
   List<Widget> pages = [
-    Container(
-      color: Colors.red,
-    ),
+    HomeView(),
     Container(
       color: Colors.green,
     ),

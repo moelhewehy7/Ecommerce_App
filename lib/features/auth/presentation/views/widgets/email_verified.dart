@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/utils/app_styles.dart';
 import 'package:flutter_application2/core/utils/assets.dart';
 import 'package:flutter_application2/core/widgets/custom_buttons.dart';
-import 'package:flutter_application2/features/auth/presentaion/views/widgets/email_verified.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_application2/features/auth/presentation/views/login_view.dart';
+import 'package:flutter_svg/svg.dart';
 
-class EmailVerifyView extends StatelessWidget {
-  const EmailVerifyView({super.key});
+class EmailVerifiedView extends StatelessWidget {
+  const EmailVerifiedView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,28 +19,20 @@ class EmailVerifyView extends StatelessWidget {
         child: Column(
           children: [
             SvgPicture.asset(
-              AssetsData.emailVerify,
+              AssetsData.emailVerifyed,
               height: 300,
             ),
-            const Text("Verify your email address!",
+            const Text("Your account successfully created!",
+                textAlign: TextAlign.center,
                 style: AppStyles.styleRalewayBold28),
             const SizedBox(
               height: 12,
-            ),
-            Text(
-              "mohamed@yahoo.com",
-              style: AppStyles.styleNunitoSansLight19.copyWith(
-                fontWeight: FontWeight.w500,
-              ),
-              overflow: TextOverflow.ellipsis,
-              maxLines: 4,
-              textAlign: TextAlign.center,
             ),
             const SizedBox(
               height: 20,
             ),
             Text(
-              "Please verify your email to continue using your account. We’ve sent a verification link to your email address. Check your inbox and follow the instructions to complete the process.",
+              "Congratulations! Your account has been successfully created, and you're all set to begin. We can’t wait for you to explore everything we have to offer.",
               style: AppStyles.styleNunitoSansLight19.copyWith(fontSize: 15),
               overflow: TextOverflow.ellipsis,
               maxLines: 4,
@@ -52,14 +44,12 @@ class EmailVerifyView extends StatelessWidget {
             CustomFilledButton(
                 text: "Continue",
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const EmailVerifiedView(),
-                  ));
+                  Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(builder: (context) => const LoginView()),
+                    (Route<dynamic> route) =>
+                        false, // Removes all previous routes
+                  );
                 }),
-            const SizedBox(
-              height: 12,
-            ),
-            CustomOutLinedButton(text: "Resend email", onPressed: () {}),
             const Spacer()
           ],
         ),

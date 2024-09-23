@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/widgets/custom_buttons.dart';
-import 'package:flutter_application2/features/auth/presentaion/views/login_view.dart';
-import 'package:flutter_application2/features/auth/presentaion/views/signup_view.dart';
+import 'package:flutter_application2/features/auth/presentation/views/login_view.dart';
+import 'package:flutter_application2/features/auth/presentation/views/signup_view.dart';
 
 import '../../../../../core/utils/app_styles.dart';
 

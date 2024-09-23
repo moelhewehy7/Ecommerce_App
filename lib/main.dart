@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/features/bottom_navigation_bar.dart';
 
-import 'package:flutter_application2/features/introduction/presentaion/views/introduction_view.dart';
+import 'package:flutter_application2/features/introduction/presentation/views/introduction_view.dart';
 
-import 'features/auth/presentaion/views/widgets/email_verify.dart';
+import 'features/auth/presentation/views/widgets/email_verify.dart';
 
 void main() {
   runApp(const MainApp());
