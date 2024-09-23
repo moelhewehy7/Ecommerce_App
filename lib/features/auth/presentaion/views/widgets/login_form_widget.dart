@@ -4,6 +4,7 @@ import 'package:flutter_application2/core/utils/app_styles.dart';
 import 'package:flutter_application2/core/widgets/custom_buttons.dart';
 import 'package:flutter_application2/core/widgets/text_fields.dart';
 import 'package:flutter_application2/features/auth/presentaion/views/signup_view.dart';
+import 'package:flutter_application2/features/auth/presentaion/views/widgets/forgot_password_view.dart';
 import 'package:icons_plus/icons_plus.dart';
 
 class LoginFormWidget extends StatelessWidget {
@@ -39,7 +40,12 @@ class LoginFormWidget extends StatelessWidget {
             ),
             const Text("Remember me", style: AppStyles.stylePoppinsMedium14),
             const Spacer(),
-            TextButton(onPressed: () {}, child: const Text("Forgot password?"))
+            TextButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const ForgotPasswordView()));
+                },
+                child: const Text("Forgot password?"))
           ],
         ),
         const SizedBox(

@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/utils/app_styles.dart';
 import 'package:flutter_application2/core/utils/assets.dart';
 import 'package:flutter_application2/core/widgets/custom_buttons.dart';
+import 'package:flutter_application2/features/auth/presentaion/views/login_view.dart';
 import 'package:flutter_svg/svg.dart';
 
-class EmailVerified extends StatelessWidget {
-  const EmailVerified({super.key});
+class EmailVerifiedView extends StatelessWidget {
+  const EmailVerifiedView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +41,16 @@ class EmailVerified extends StatelessWidget {
             const SizedBox(
               height: 26,
             ),
-            CustomFilledButton(text: "Continue", onPressed: () {}),
+            CustomFilledButton(
+                text: "Continue",
+                onPressed: () {
+                  Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(builder: (context) => const LoginView()),
+                    (Route<dynamic> route) =>
+                        false, // Removes all previous routes
+                  );
+                }),
+            const Spacer()
           ],
         ),
       ),

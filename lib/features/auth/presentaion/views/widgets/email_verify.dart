@@ -5,8 +5,8 @@ import 'package:flutter_application2/core/widgets/custom_buttons.dart';
 import 'package:flutter_application2/features/auth/presentaion/views/widgets/email_verified.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class EmailVerify extends StatelessWidget {
-  const EmailVerify({super.key});
+class EmailVerifyView extends StatelessWidget {
+  const EmailVerifyView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -53,13 +53,14 @@ class EmailVerify extends StatelessWidget {
                 text: "Continue",
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const EmailVerified(),
+                    builder: (context) => const EmailVerifiedView(),
                   ));
                 }),
             const SizedBox(
               height: 12,
             ),
-            CustomOutLinedButton(text: "Resend email", onPressed: () {})
+            CustomOutLinedButton(text: "Resend email", onPressed: () {}),
+            const Spacer()
           ],
         ),
       ),
