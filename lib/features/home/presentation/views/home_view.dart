@@ -1,15 +1,14 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application2/core/utils/app_styles.dart';
-import 'package:flutter_application2/core/widgets/custom_cerved_edges.dart';
-import 'package:flutter_application2/core/widgets/custom_curved_widget.dart';
+
+import 'package:flutter_application2/core/widgets/text_fields.dart';
+
 import 'package:icons_plus/icons_plus.dart';
 
-import '../../../../core/widgets/custom_app_bar.dart';
-import '../../../../core/widgets/custom_cart_counter.dart';
-import 'widgets/custom_circular_container.dart';
+import 'widgets/home_categories_section.dart';
 import 'widgets/home_view_header.dart';
+import 'widgets/hone_appbar.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -22,26 +21,27 @@ class HomeView extends StatelessWidget {
           children: [
             HomeViewHeader(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  CustomAppBar(
-                      title: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("Good day for shopping",
-                              style: AppStyles.styleNunitoSansRegular15
-                                  .copyWith(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .surface)),
-                          Text("Mohamed elhewehy",
-                              style: AppStyles.styleRalewayBold17.copyWith(
-                                  color:
-                                      Theme.of(context).colorScheme.surface)),
-                        ],
-                      ),
-                      actions: [
-                        CustomCartCounter(),
-                      ])
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        HomeAppBar(),
+                        SizedBox(
+                          height: 35,
+                        ),
+                        BasicTextForm(
+                            text: "Search in Store",
+                            icon: Iconsax.search_normal_1_outline),
+                        SizedBox(
+                          height: 40,
+                        ),
+                      ],
+                    ),
+                  ),
+                  HomeCategoriesSection()
                 ],
               ),
             ),

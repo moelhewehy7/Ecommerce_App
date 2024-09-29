@@ -98,7 +98,6 @@ class AppStyles {
     fontFamily: "Raleway",
     fontSize: 21,
     fontWeight: FontWeight.w700,
-    color: Color(0xff202020),
   );
   static const TextStyle styleRalewayeMedium16 = TextStyle(
     fontFamily: "Raleway",

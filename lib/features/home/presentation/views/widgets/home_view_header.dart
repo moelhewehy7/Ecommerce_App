@@ -18,12 +18,13 @@ class HomeViewHeader extends StatelessWidget {
         color: Theme.of(context).colorScheme.primary,
         child: Stack(
           children: [
-            Positioned(
+            const Positioned(
                 top: -100,
                 right: -250,
                 child:
                     CustomCircularContainer()), // if we wanna go up we need to use - and right - and the rest is the oppostie
-            Positioned(top: 100, right: -300, child: CustomCircularContainer()),
+            const Positioned(
+                top: 100, right: -300, child: CustomCircularContainer()),
             child,
           ],
         ),

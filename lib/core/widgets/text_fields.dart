@@ -41,6 +41,7 @@ class BasicTextForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
+        fillColor: Theme.of(context).colorScheme.surfaceBright,
         prefixIcon: Icon(icon, color: const Color(0xFF717171)),
         contentPadding:
             const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
