@@ -18,10 +18,10 @@ class HomeCategoriesSection extends StatelessWidget {
               style: AppStyles.styleRalewayeBold21
                   .copyWith(color: Theme.of(context).colorScheme.surface)),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
-        SizedBox(
+        const SizedBox(
           height: 90,
           child: CategoriesListView(),
         ),

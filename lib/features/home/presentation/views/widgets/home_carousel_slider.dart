@@ -28,6 +28,9 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SizedBox(
+          height: 18,
+        ),
         CarouselSlider(
           carouselController: carouselController,
           options: CarouselOptions(
@@ -44,9 +47,10 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
           }),
         ),
         SizedBox(
-          height: 12,
+          height: 18,
         ),
         Row(
+            mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(
                 images.length,

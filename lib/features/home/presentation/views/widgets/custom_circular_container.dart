@@ -10,9 +10,8 @@ class CustomCircularContainer extends StatelessWidget {
     return Container(
       height: 400,
       width: 400,
-      decoration: ShapeDecoration(
-          color: const Color.fromARGB(25, 255, 255, 255),
-          shape: CircleBorder()),
+      decoration: const ShapeDecoration(
+          color: Color.fromARGB(25, 255, 255, 255), shape: CircleBorder()),
     );
   }
 }

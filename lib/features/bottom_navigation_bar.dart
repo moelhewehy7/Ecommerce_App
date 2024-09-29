@@ -14,7 +14,7 @@ class BottomNavigationBarMenu extends StatefulWidget {
 class _BottomNavigationBarMenuState extends State<BottomNavigationBarMenu> {
   int _selectedIndex = 0;
   List<Widget> pages = [
-    HomeView(),
+    const HomeView(),
     Container(
       color: Colors.green,
     ),

@@ -24,8 +24,8 @@ class CustomCartCounter extends StatelessWidget {
             width: 20,
             decoration: ShapeDecoration(
                 color: Theme.of(context).colorScheme.onSecondaryFixedVariant,
-                shape: CircleBorder(side: BorderSide.none)),
-            child: Center(
+                shape: const CircleBorder(side: BorderSide.none)),
+            child: const Center(
                 child: Text(
               "2",
               style: TextStyle(fontSize: 12, color: Colors.white),

@@ -24,7 +24,7 @@ class CategoriesListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        padding: EdgeInsets.only(left: 20),
+        padding: const EdgeInsets.only(left: 20),
         scrollDirection: Axis.horizontal,
         itemCount: 12,
         itemBuilder: (context, index) {
