@@ -8,13 +8,16 @@ class CustomRoundedContainer extends StatelessWidget {
       this.width,
       this.borderRadius,
       required this.child,
-      required this.color});
+      required this.color,
+      this.showBorder = false,
+      this.borderColor = Colors.black});
   final double? height, width;
   final EdgeInsetsGeometry? padding;
   final BorderRadiusGeometry? borderRadius;
-
   final Color color;
   final Widget child;
+  final bool showBorder;
+  final Color borderColor;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,6 +25,7 @@ class CustomRoundedContainer extends StatelessWidget {
       height: height,
       width: width,
       decoration: BoxDecoration(
+        border: showBorder ? Border.all(color: borderColor) : null,
         color: color,
         borderRadius: borderRadius, // Optional rounded corners
       ),

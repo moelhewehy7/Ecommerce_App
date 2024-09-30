@@ -8,7 +8,6 @@ class AppStyles {
     fontSize: 12,
     fontWeight: FontWeight.w400,
     color: Color(0xff000000),
-    height: 36 / 12,
   );
   static const TextStyle styleNunitoSansLight19 = TextStyle(
     fontFamily: "Nunito Sans",
@@ -30,7 +29,6 @@ class AppStyles {
     fontFamily: "Raleway",
     fontSize: 17,
     fontWeight: FontWeight.w700,
-    height: 21 / 17,
   );
   static const TextStyle styleRalewayBold58 = TextStyle(
     fontFamily: "Raleway",

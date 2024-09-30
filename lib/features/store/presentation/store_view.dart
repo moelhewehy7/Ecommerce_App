@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/utils/app_styles.dart';
 import 'package:flutter_application2/core/widgets/custom_app_bar.dart';
 import 'package:flutter_application2/core/widgets/custom_cart_counter.dart';
+import 'package:flutter_application2/core/widgets/custom_grid_view.dart';
 import 'package:flutter_application2/core/widgets/custom_rounded_container.dart';
 import 'package:flutter_application2/core/widgets/custom_text_header.dart';
 import 'package:flutter_application2/core/widgets/text_fields.dart';
@@ -37,7 +38,6 @@ class StoreView extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   child: ListView(
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
                     children: [
                       SizedBox(
                         height: 16,
@@ -58,45 +58,63 @@ class StoreView extends StatelessWidget {
                       SizedBox(
                         height: 12,
                       ),
-                      CustomRoundedContainer(
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Brand(Brands.nike),
-                            SizedBox(
-                              width: 12,
+                      CustomGridView(
+                          height: 80,
+                          child: CustomRoundedContainer(
+                            borderColor:
+                                Theme.of(context).colorScheme.onSurfaceVariant,
+                            showBorder: true,
+                            borderRadius: BorderRadius.circular(12),
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 15),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Brand(Brands.nike),
+                                  const SizedBox(width: 12),
+                                  Flexible(
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Text(
+                                              "Nike",
+                                              style: AppStyles
+                                                  .styleRalewayExtraBold20
+                                                  .copyWith(
+                                                      fontSize: 18,
+                                                      color: Theme.of(context)
+                                                          .colorScheme
+                                                          .onSurface),
+                                            ),
+                                            Icon(
+                                              Iconsax.verify_bold,
+                                              color: Colors.green,
+                                              size: 20,
+                                            )
+                                          ],
+                                        ),
+                                        Text(
+                                          "265 Products",
+                                          overflow: TextOverflow.ellipsis,
+                                          style: AppStyles
+                                              .styleNunitoSansSemiBold14
+                                              .copyWith(color: Colors.grey),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                            Column(
-                              mainAxisSize: MainAxisSize.min,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Text(
-                                      "Nike",
-                                      style: AppStyles.styleRalewayBold17,
-                                    ),
-                                    SizedBox(
-                                      width: 6,
-                                    ),
-                                    Icon(
-                                      Iconsax.verify_bold,
-                                      color: Color(0xFF4CAF50),
-                                      size: 20,
-                                    )
-                                  ],
-                                ),
-                                Text("265 Products",
-                                    style: AppStyles.styleNunitoSansRegular12)
-                              ],
-                            )
-                          ],
-                        ),
-                        color:
-                            Theme.of(context).colorScheme.surfaceContainerLow,
-                        padding: EdgeInsets.all(12),
-                      )
+                            color: Theme.of(context).colorScheme.surface,
+                            padding: EdgeInsets.all(12),
+                          ))
                     ],
                   ),
                 ),
