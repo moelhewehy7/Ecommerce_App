@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application2/core/widgets/custom_text_header.dart';
 import 'package:flutter_application2/features/home/presentation/views/widgets/home_carousel_slider.dart';
 import 'package:flutter_application2/features/home/presentation/views/widgets/home_view_products.dart';
 import 'widgets/home_view_header.dart';
@@ -21,6 +22,13 @@ class HomeView extends StatelessWidget {
             HomeCarouselSlider(),
             SizedBox(
               height: 24,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: CustomTextheader(
+                  title: "Popular Products",
+                  titleColor: Theme.of(context).colorScheme.onSurface,
+                  showTextButton: true),
             ),
             HomeViewProducts(),
           ],

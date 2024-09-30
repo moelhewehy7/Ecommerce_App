@@ -94,9 +94,9 @@ class AppStyles {
     color: Color(0xff202020),
     height: 18 / 14,
   );
-  static const TextStyle styleRalewayeBold21 = TextStyle(
+  static const TextStyle styleRalewayeBold20 = TextStyle(
     fontFamily: "Raleway",
-    fontSize: 21,
+    fontSize: 20,
     fontWeight: FontWeight.w700,
   );
   static const TextStyle styleRalewayeMedium16 = TextStyle(
