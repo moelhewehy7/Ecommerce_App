@@ -13,14 +13,18 @@ class GridVerticalItem extends StatelessWidget {
       CustomRoundedContainer(
         color: Theme.of(context).colorScheme.surfaceBright,
         width: 220,
-        radius: 12,
+        borderRadius: BorderRadius.circular(12),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CustomRoundedContainer(
               color: Theme.of(context).colorScheme.surfaceContainerLow,
               height: 180,
-              radius: 12,
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(12),
+                  topRight: Radius.circular(12),
+                  bottomLeft: Radius.circular(24),
+                  bottomRight: Radius.circular(24)),
               padding: const EdgeInsets.all(8),
               child: GridTile(
                   header: const GridTileHeader(),

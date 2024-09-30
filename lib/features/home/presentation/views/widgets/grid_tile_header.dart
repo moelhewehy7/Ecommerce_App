@@ -13,7 +13,12 @@ class GridTileHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         const DiscountBadge(),
-        IconButton(onPressed: () {}, icon: const Icon(Iconsax.heart_outline))
+        IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Iconsax.heart_bold,
+              color: Colors.red,
+            ))
       ],
     );
   }

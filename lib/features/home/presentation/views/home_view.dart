@@ -26,8 +26,8 @@ class HomeView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    mainAxisSpacing: 15,
-                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 5,
+                    crossAxisSpacing: 15,
                     mainAxisExtent: 300,
                     crossAxisCount: 2),
                 itemCount: 15,
