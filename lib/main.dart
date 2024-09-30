@@ -25,7 +25,6 @@ class MainApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(
             surfaceBright: Colors.white,
             secondary: const Color(0xFF000000),
-            surface: Colors.white,
             primary: const Color(0xFF004cff),
             seedColor: Colors.blue,
             onTertiary: Colors.blue),
