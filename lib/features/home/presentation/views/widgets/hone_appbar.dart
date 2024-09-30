@@ -23,8 +23,10 @@ class HomeAppBar extends StatelessWidget {
                     .copyWith(color: Theme.of(context).colorScheme.surface)),
           ],
         ),
-        actions: const [
-          CustomCartCounter(),
+        actions: [
+          CustomCartCounter(
+            color: Theme.of(context).colorScheme.surface,
+          ),
         ]);
   }
 }

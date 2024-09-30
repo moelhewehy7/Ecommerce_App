@@ -28,6 +28,7 @@ class HomeViewHeaderBody extends StatelessWidget {
                 height: 35,
               ),
               BasicTextForm(
+                  color: Theme.of(context).colorScheme.surfaceBright,
                   text: "Search in Store",
                   icon: Iconsax.search_normal_1_outline),
               SizedBox(

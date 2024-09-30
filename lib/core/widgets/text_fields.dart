@@ -33,15 +33,17 @@ class BasicTextForm extends StatelessWidget {
   const BasicTextForm({
     super.key,
     required this.text,
+    this.color,
     required this.icon,
   });
   final String text;
   final IconData icon;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-        fillColor: Theme.of(context).colorScheme.surfaceBright,
+        fillColor: color,
         prefixIcon: Icon(icon, color: const Color(0xFF717171)),
         contentPadding:
             const EdgeInsets.symmetric(horizontal: 16, vertical: 16),

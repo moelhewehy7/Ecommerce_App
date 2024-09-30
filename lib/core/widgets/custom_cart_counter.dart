@@ -4,8 +4,9 @@ import 'package:icons_plus/icons_plus.dart';
 class CustomCartCounter extends StatelessWidget {
   const CustomCartCounter({
     super.key,
+    required this.color,
   });
-
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -14,7 +15,7 @@ class CustomCartCounter extends StatelessWidget {
             onPressed: () {},
             icon: Icon(
               Iconsax.shopping_bag_bold,
-              color: Theme.of(context).colorScheme.surface,
+              color: color,
             )),
         Positioned(
           top: 0,

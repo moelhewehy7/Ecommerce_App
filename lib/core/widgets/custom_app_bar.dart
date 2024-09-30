@@ -5,6 +5,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar(
       {super.key,
       this.leadingIcon,
+      this.padding = 0,
       this.actions,
       this.title,
       this.showBackArow = false,
@@ -14,26 +15,31 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Function()? leadingOnPressed;
   final bool showBackArow;
   final List<Widget>? actions;
+  final double padding;
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      backgroundColor: Colors.transparent,
-      scrolledUnderElevation: 0,
-      automaticallyImplyLeading: false,
-      leading: showBackArow
-          ? IconButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              icon: Icon(
-                Iconsax.arrow_left_outline,
-                color: Theme.of(context).colorScheme.surface,
-              ))
-          : leadingIcon != null
-              ? IconButton(onPressed: leadingOnPressed, icon: Icon(leadingIcon))
-              : null,
-      title: title,
-      actions: actions,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: padding),
+      child: AppBar(
+        backgroundColor: Colors.transparent,
+        scrolledUnderElevation: 0,
+        automaticallyImplyLeading: false,
+        leading: showBackArow
+            ? IconButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                icon: Icon(
+                  Iconsax.arrow_left_outline,
+                  color: Theme.of(context).colorScheme.surface,
+                ))
+            : leadingIcon != null
+                ? IconButton(
+                    onPressed: leadingOnPressed, icon: Icon(leadingIcon))
+                : null,
+        title: title,
+        actions: actions,
+      ),
     );
   }
 
