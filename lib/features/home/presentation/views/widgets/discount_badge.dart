@@ -9,11 +9,11 @@ class DiscountBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomRoundedContainer(
-      padding: EdgeInsets.symmetric(horizontal: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       height: 20,
       borderRadius: BorderRadius.circular(12),
       color: Colors.green,
-      child: Text(
+      child: const Text(
         "26%",
         style: TextStyle(color: Colors.white),
       ),

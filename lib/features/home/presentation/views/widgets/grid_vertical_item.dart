@@ -20,7 +20,7 @@ class GridVerticalItem extends StatelessWidget {
             CustomRoundedContainer(
               color: Theme.of(context).colorScheme.surfaceContainerLow,
               height: 180,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(12),
                   topRight: Radius.circular(12),
                   bottomLeft: Radius.circular(24),
