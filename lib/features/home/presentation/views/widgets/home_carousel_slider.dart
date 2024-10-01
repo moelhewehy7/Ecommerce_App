@@ -43,7 +43,7 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
             height: 200,
           ),
           items: List.generate(images.length, (index) {
-            return RoundedImage(image: images[index]);
+            return RoundedImage(padding: EdgeInsets.zero, image: images[index]);
           }),
         ),
         SizedBox(

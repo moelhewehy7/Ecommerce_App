@@ -5,6 +5,7 @@ import 'package:flutter_application2/core/utils/app_styles.dart';
 import 'package:flutter_application2/core/widgets/custom_app_bar.dart';
 import 'package:flutter_application2/core/widgets/custom_cart_counter.dart';
 import 'package:flutter_application2/features/store/presentation/widgets/store_view_header.dart';
+import 'package:flutter_application2/features/store/presentation/widgets/tab_bar_view_body.dart';
 
 class StoreView extends StatelessWidget {
   const StoreView({super.key});
@@ -31,7 +32,13 @@ class StoreView extends StatelessWidget {
                 StoreViewHeader(),
               ];
             },
-            body: Container()),
+            body: TabBarView(children: const [
+              TabBarViewBody(),
+              TabBarViewBody(),
+              TabBarViewBody(),
+              TabBarViewBody(),
+              TabBarViewBody(),
+            ])),
       ),
     );
   }

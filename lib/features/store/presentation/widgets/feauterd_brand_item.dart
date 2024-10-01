@@ -7,16 +7,19 @@ import 'package:icons_plus/icons_plus.dart';
 class FeauterdBrandItem extends StatelessWidget {
   const FeauterdBrandItem({
     super.key,
+    this.showBorder = true,
+    this.innerpadding = 12,
   });
-
+  final bool showBorder;
+  final double innerpadding;
   @override
   Widget build(BuildContext context) {
     return CustomRoundedContainer(
       borderColor: Theme.of(context).colorScheme.onSurfaceVariant,
-      showBorder: true,
+      showBorder: showBorder,
       borderRadius: BorderRadius.circular(12),
       color: Theme.of(context).colorScheme.surface,
-      padding: const EdgeInsets.all(12),
+      padding: EdgeInsets.all(innerpadding),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Row(
