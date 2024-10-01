@@ -32,13 +32,8 @@ class StoreView extends StatelessWidget {
                 StoreViewHeader(),
               ];
             },
-            body: TabBarView(children: const [
-              TabBarViewBody(),
-              TabBarViewBody(),
-              TabBarViewBody(),
-              TabBarViewBody(),
-              TabBarViewBody(),
-            ])),
+            body: TabBarView(
+                children: List.generate(5, (index) => TabBarViewBody()))),
       ),
     );
   }
