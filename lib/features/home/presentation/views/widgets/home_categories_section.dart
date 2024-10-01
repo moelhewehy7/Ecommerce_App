@@ -13,17 +13,17 @@ class HomeCategoriesSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: CustomTextheader(
             titleColor: Theme.of(context).colorScheme.surface,
             showTextButton: false,
             title: "Popular Categories",
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
-        SizedBox(
+        const SizedBox(
           height: 90,
           child: CategoriesListView(),
         ),

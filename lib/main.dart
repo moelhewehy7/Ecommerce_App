@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application2/features/home/presentation/views/home_view.dart';
-
-import 'package:flutter_application2/features/store/presentation/store_view.dart';
-
 import 'features/bottom_navigation_bar.dart';
 
 void main() {
@@ -33,7 +29,7 @@ class MainApp extends StatelessWidget {
             seedColor: Colors.blue,
             onTertiary: Colors.blue),
       ),
-      home: BottomNavigationBarMenu(),
+      home: const BottomNavigationBarMenu(),
     );
   }
 }
