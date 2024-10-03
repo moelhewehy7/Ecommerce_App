@@ -37,7 +37,10 @@ class HomeViewHeaderBody extends StatelessWidget {
             ],
           ),
         ),
-        HomeCategoriesSection()
+        HomeCategoriesSection(),
+        SizedBox(
+          height: 32,
+        ),
       ],
     );
   }

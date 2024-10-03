@@ -5,9 +5,11 @@ class CustomGridView extends StatelessWidget {
     super.key,
     required this.child,
     this.height = 300,
+    this.physics = const NeverScrollableScrollPhysics(),
   });
   final Widget child;
   final double height;
+  final ScrollPhysics? physics;
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
@@ -16,9 +18,9 @@ class CustomGridView extends StatelessWidget {
           mainAxisSpacing: 5,
           crossAxisSpacing: 15,
           crossAxisCount: 2),
-      itemCount: 4,
+      itemCount: 6,
       shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
+      physics: physics,
       itemBuilder: (itemBuilder, index) => child,
     );
   }

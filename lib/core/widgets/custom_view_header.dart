@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/widgets/custom_curved_widget.dart';
-import 'custom_circular_container.dart';
+import 'custom_curved_widget.dart';
+import '../../features/home/presentation/views/widgets/custom_circular_container.dart';
 
-class HomeViewHeader extends StatelessWidget {
-  const HomeViewHeader({
+class CustomViewHeader extends StatelessWidget {
+  const CustomViewHeader({
     required this.child,
     super.key,
   });
   final Widget child;
+
   @override
   Widget build(BuildContext context) {
     return CustomCurvedWidget(
       widget: Container(
         padding: EdgeInsets.zero,
-        height: 400,
         color: Theme.of(context).colorScheme.primary,
         child: Stack(
           children: [

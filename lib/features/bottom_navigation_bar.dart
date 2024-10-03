@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/features/home/presentation/views/home_view.dart';
+import 'package:flutter_application2/features/profile/presentation/views/profile_view.dart';
 import 'package:flutter_application2/features/store/presentation/store_view.dart';
 
 import 'package:icons_plus/icons_plus.dart';
+
+import 'wishlist/presentation/views/wishlist_view.dart';
 
 class BottomNavigationBarMenu extends StatefulWidget {
   const BottomNavigationBarMenu({super.key});
@@ -14,15 +17,11 @@ class BottomNavigationBarMenu extends StatefulWidget {
 
 class _BottomNavigationBarMenuState extends State<BottomNavigationBarMenu> {
   int _selectedIndex = 0;
-  List<Widget> pages = [
-    const HomeView(),
-    const StoreView(),
-    Container(
-      color: Colors.blue,
-    ),
-    Container(
-      color: Colors.yellow,
-    )
+  List<Widget> pages = const [
+    HomeView(),
+    StoreView(),
+    WishlistView(),
+    ProfileView()
   ];
   @override
   Widget build(BuildContext context) {
