@@ -4,6 +4,7 @@ import 'package:icons_plus/icons_plus.dart';
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar(
       {super.key,
+      this.backArrowColor,
       this.leadingIcon,
       this.padding = 0,
       this.actions,
@@ -16,6 +17,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool showBackArow;
   final List<Widget>? actions;
   final double padding;
+  final Color? backArrowColor;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -32,7 +34,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 },
                 icon: Icon(
                   Iconsax.arrow_left_outline,
-                  color: Theme.of(context).colorScheme.surface,
+                  color: backArrowColor,
                 ))
             : leadingIcon != null
                 ? IconButton(

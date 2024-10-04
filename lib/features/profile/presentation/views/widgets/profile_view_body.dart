@@ -3,6 +3,8 @@ import 'package:flutter_application2/core/utils/app_styles.dart';
 import 'package:flutter_application2/core/widgets/custom_app_bar.dart';
 import 'package:icons_plus/icons_plus.dart';
 
+import 'profile_edit.dart';
+
 class ProfileViewHeaderBody extends StatelessWidget {
   const ProfileViewHeaderBody({
     super.key,
@@ -20,6 +22,7 @@ class ProfileViewHeaderBody extends StatelessWidget {
         ),
         ListTile(
           leading: CircleAvatar(
+            radius: 30,
             child: Padding(
               padding: const EdgeInsets.all(4),
               child: Image.asset("assets/images/pp.webp"),
@@ -32,7 +35,10 @@ class ProfileViewHeaderBody extends StatelessWidget {
               style: AppStyles.styleNunitoSansRegular15
                   .copyWith(color: Theme.of(context).colorScheme.surface)),
           trailing: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const ProfileEdit()));
+              },
               icon: Icon(
                 Iconsax.edit_outline,
                 color: Theme.of(context).colorScheme.surface,
