@@ -21,7 +21,7 @@ class StoreViewHeader extends StatelessWidget {
       pinned: true,
       floating: true,
       automaticallyImplyLeading: false,
-      expandedHeight: 440,
+      expandedHeight: 425,
       flexibleSpace: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: ListView(
@@ -45,7 +45,8 @@ class StoreViewHeader extends StatelessWidget {
             const SizedBox(
               height: 12,
             ),
-            const CustomGridView(height: 80, child: FeauterdBrandItem()),
+            const CustomGridView(
+                itemCount: 4, height: 80, child: FeauterdBrandItem()),
           ],
         ),
       ),
