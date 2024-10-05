@@ -12,6 +12,8 @@ import 'package:flutter_application2/core/widgets/product_detail/widgets/rating_
 import 'package:flutter_application2/core/widgets/product_detail/widgets/vartiation_container.dart';
 import 'package:icons_plus/icons_plus.dart';
 import '../product detail/widgets/product_detail_header.dart';
+import 'widgets/custom_bottom_nav_bar.dart';
+import 'widgets/product_header.dart';
 
 class ProductDetail extends StatelessWidget {
   const ProductDetail({super.key});
@@ -19,107 +21,58 @@ class ProductDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-          child: Column(children: [
-        const CustomCurvedWidget(
-          widget: ProductDetailHeader(),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const RatingHeader(),
-              const SizedBox(
-                height: 16,
-              ),
-              const PriceRow(),
-              const SizedBox(
-                height: 16,
-              ),
-              Text(
-                "Black Acer laptop",
-                style: AppStyles.stylePoppinsMedium20.copyWith(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 18,
-                    color: Theme.of(context).colorScheme.onSurface),
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              const CustomTextRich(
-                leading: "Status",
-                title: "in Stock",
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              Row(
-                children: [
-                  Brand(Brands.nike),
-                  const SizedBox(
-                    width: 6,
-                  ),
-                  Text(
-                    "Acer",
-                    style: AppStyles.styleRalewayBold17.copyWith(
-                        fontSize: 17,
-                        color: Theme.of(context).colorScheme.onSurface),
-                  ),
-                  const SizedBox(
-                    width: 6,
-                  ),
-                  const Icon(
-                    Icons.fiber_manual_record_sharp,
-                    color: Colors.black,
-                    size: 18,
-                  )
-                ],
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              const VartiationsContainer(),
-              const SizedBox(
-                height: 16,
-              ),
-              CustomTextheader(
-                title: "Color",
-                showTextButton: false,
-                titleColor: Theme.of(context).colorScheme.onSurface,
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              const ChoiceChipColor(),
-              const SizedBox(
-                height: 16,
-              ),
-              CustomTextheader(
-                title: "Size",
-                showTextButton: false,
-                titleColor: Theme.of(context).colorScheme.onSurface,
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              const ChoiceChipSize(),
-              const SizedBox(
-                height: 16,
-              ),
-              CustomFilledButton(
-                text: "Checkout",
-                onPressed: () {},
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              DiscriptionWidget(laptopDescription: _laptopDescription)
-            ],
+        body: SingleChildScrollView(
+            child: Column(children: [
+          const CustomCurvedWidget(
+            widget: ProductDetailHeader(),
           ),
-        )
-      ])),
-    );
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const ProductHeader(),
+                const VartiationsContainer(),
+                const SizedBox(
+                  height: 16,
+                ),
+                CustomTextheader(
+                  title: "Color",
+                  showTextButton: false,
+                  titleColor: Theme.of(context).colorScheme.onSurface,
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                const ChoiceChipColor(),
+                const SizedBox(
+                  height: 16,
+                ),
+                CustomTextheader(
+                  title: "Size",
+                  showTextButton: false,
+                  titleColor: Theme.of(context).colorScheme.onSurface,
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                const ChoiceChipSize(),
+                const SizedBox(
+                  height: 16,
+                ),
+                CustomFilledButton(
+                  text: "Checkout",
+                  onPressed: () {},
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                DiscriptionWidget(laptopDescription: _laptopDescription)
+              ],
+            ),
+          )
+        ])),
+        bottomNavigationBar: const CustomBottomNavigationBar());
   }
 
   final String _laptopDescription = '''

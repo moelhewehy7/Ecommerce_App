@@ -7,9 +7,11 @@ class CustomFilledButton extends StatelessWidget {
     required this.text,
     super.key,
     required this.onPressed,
+    this.fontSize = 19,
   });
   final String text;
   final void Function()? onPressed;
+  final double fontSize;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -23,7 +25,9 @@ class CustomFilledButton extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(top: 13, bottom: 10),
             child: Text(text,
+                textAlign: TextAlign.center,
                 style: AppStyles.styleNunitoSansMedium19.copyWith(
+                    fontSize: fontSize,
                     color: Theme.of(context).colorScheme.onSecondary)),
           )),
     );
