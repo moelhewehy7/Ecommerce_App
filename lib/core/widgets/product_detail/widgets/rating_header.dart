@@ -23,12 +23,10 @@ class RatingHeader extends StatelessWidget {
           style: AppStyles.stylePoppinsMedium20.copyWith(
               fontWeight: FontWeight.w600,
               color: Theme.of(context).colorScheme.onSurface,
-              fontSize: 17),
+              fontSize: 15),
         ),
         const Spacer(),
-        const Icon(
-          Icons.share,
-        ),
+        IconButton(onPressed: () {}, icon: const Icon(Icons.share)),
       ],
     );
   }
