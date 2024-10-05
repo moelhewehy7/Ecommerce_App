@@ -11,7 +11,6 @@ import 'package:flutter_application2/core/widgets/product_detail/widgets/price_r
 import 'package:flutter_application2/core/widgets/product_detail/widgets/rating_header.dart';
 import 'package:flutter_application2/core/widgets/product_detail/widgets/vartiation_container.dart';
 import 'package:icons_plus/icons_plus.dart';
-
 import '../product detail/widgets/product_detail_header.dart';
 
 class ProductDetail extends StatelessWidget {
