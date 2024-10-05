@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/features/profile/presentation/views/widgets/profile_info_row.dart';
 import 'package:icons_plus/icons_plus.dart';
-
 import '../../../../../core/widgets/custom_text_header.dart';
 
 class ProfileInformation extends StatelessWidget {
@@ -17,7 +16,7 @@ class ProfileInformation extends StatelessWidget {
             title: "Profile Information",
             showTextButton: false,
             titleColor: Theme.of(context).colorScheme.onSurface),
-        SizedBox(
+        const SizedBox(
           height: 16,
         ),
         ProfileInfoRow(
@@ -32,7 +31,7 @@ class ProfileInformation extends StatelessWidget {
           title: "moElhewehy",
           icon: Iconsax.arrow_right_3_outline,
         ),
-        SizedBox(
+        const SizedBox(
           height: 16,
         ),
       ],
