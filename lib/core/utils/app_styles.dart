@@ -47,7 +47,6 @@ class AppStyles {
     fontFamily: "Poppins",
     fontSize: 20,
     fontWeight: FontWeight.w500,
-    color: Color(0xffd2d2d2),
     height: 19 / 20,
   );
   static const TextStyle stylePoppinsMedium14 = TextStyle(

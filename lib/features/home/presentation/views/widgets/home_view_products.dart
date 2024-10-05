@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/widgets/custom_grid_view.dart';
-import 'package:flutter_application2/core/widgets/product_detail.dart';
+import 'package:flutter_application2/core/widgets/product_detail/product_detail.dart';
 import 'package:flutter_application2/features/home/presentation/views/widgets/grid_vertical_item.dart';
 
 class HomeViewProducts extends StatelessWidget {
