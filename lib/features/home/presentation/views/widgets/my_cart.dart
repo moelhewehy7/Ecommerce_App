@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/widgets/custom_app_bar.dart';
+import 'package:flutter_application2/core/widgets/custom_buttons.dart';
 import 'package:flutter_application2/core/widgets/custom_rounded_container.dart';
 import '../../../../../core/utils/app_styles.dart';
 
@@ -167,6 +168,11 @@ class MyCart extends StatelessWidget {
             ]),
           );
         },
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        child: CustomFilledButton(
+            text: r"Proceed to checkout $245.0", onPressed: () {}),
       ),
     );
   }
