@@ -5,14 +5,16 @@ class CustomCartCounter extends StatelessWidget {
   const CustomCartCounter({
     super.key,
     required this.color,
+    this.onPressed,
   });
   final Color color;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         IconButton(
-            onPressed: () {},
+            onPressed: onPressed,
             icon: Icon(
               Iconsax.shopping_bag_bold,
               color: color,
