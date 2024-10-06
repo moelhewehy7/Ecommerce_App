@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application2/core/utils/app_styles.dart';
 import 'package:flutter_application2/core/widgets/custom_buttons.dart';
 import 'package:flutter_application2/core/widgets/custom_curved_widget.dart';
 import 'package:flutter_application2/core/widgets/custom_text_header.dart';
 import 'package:flutter_application2/core/widgets/product_detail/widgets/chipchoice_color.dart';
 import 'package:flutter_application2/core/widgets/product_detail/widgets/chipchoice_size.dart';
-import 'package:flutter_application2/core/widgets/product_detail/widgets/custom_text_rich.dart';
 import 'package:flutter_application2/core/widgets/product_detail/widgets/discrtipion_widget.dart';
-import 'package:flutter_application2/core/widgets/product_detail/widgets/price_row.dart';
-import 'package:flutter_application2/core/widgets/product_detail/widgets/rating_header.dart';
+import 'package:flutter_application2/core/widgets/product_detail/widgets/product_detail_header.dart';
 import 'package:flutter_application2/core/widgets/product_detail/widgets/vartiation_container.dart';
-import 'package:icons_plus/icons_plus.dart';
-import '../product detail/widgets/product_detail_header.dart';
 import 'widgets/custom_bottom_nav_bar.dart';
 import 'widgets/product_header.dart';
 

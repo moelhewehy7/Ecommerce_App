@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application2/core/widgets/product_detail/widgets/custom_text_rich.dart';
 import 'package:icons_plus/icons_plus.dart';
 
 import '../../../utils/app_styles.dart';
-import '../../product_detail.dart';
 import 'price_row.dart';
 import 'rating_header.dart';
 
