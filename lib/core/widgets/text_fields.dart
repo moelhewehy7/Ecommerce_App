@@ -33,15 +33,21 @@ class BasicTextForm extends StatelessWidget {
   const BasicTextForm({
     super.key,
     required this.text,
+    this.controller,
+    this.onTap,
     this.color,
     required this.icon,
   });
   final String text;
   final IconData icon;
   final Color? color;
+  final VoidCallback? onTap;
+  final TextEditingController? controller;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
+      onTap: onTap,
       decoration: InputDecoration(
         fillColor: color,
         prefixIcon: Icon(icon, color: const Color(0xFF717171)),

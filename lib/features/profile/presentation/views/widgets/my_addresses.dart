@@ -1,11 +1,10 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/utils/app_styles.dart';
 import 'package:flutter_application2/features/profile/presentation/views/widgets/address_container.dart';
 import 'package:icons_plus/icons_plus.dart';
 
 import '../../../../../core/widgets/custom_app_bar.dart';
+import 'add_new_address.dart';
 
 class MyAddresses extends StatefulWidget {
   const MyAddresses({super.key});
@@ -20,8 +19,11 @@ class _MyAddressesState extends State<MyAddresses> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Iconsax.add_outline),
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const AddNewAddress()));
+        },
+        child: const Icon(Iconsax.add_outline),
       ),
       appBar: CustomAppBar(
         padding: 5,

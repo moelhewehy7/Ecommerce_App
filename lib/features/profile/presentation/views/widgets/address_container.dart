@@ -12,7 +12,7 @@ class AddressContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomRoundedContainer(
         borderRadius: BorderRadius.circular(12),
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         showBorder: true,
         borderColor: isSelected
             ? Theme.of(context).colorScheme.primary
@@ -22,15 +22,15 @@ class AddressContainer extends StatelessWidget {
             : Theme.of(context).colorScheme.surface,
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            Text(
+            const Text(
               "Mohamed elhewehy",
               style: AppStyles.styleRalewayBold17,
             ),
             isSelected
-                ? Icon(Icons.check_circle, color: Colors.blueAccent)
-                : SizedBox()
+                ? const Icon(Icons.check_circle, color: Colors.blueAccent)
+                : const SizedBox()
           ]),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           Text(
@@ -39,7 +39,7 @@ class AddressContainer extends StatelessWidget {
               fontSize: 14,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           Text(
