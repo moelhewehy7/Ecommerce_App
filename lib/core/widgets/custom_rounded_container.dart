@@ -20,7 +20,8 @@ class CustomRoundedContainer extends StatelessWidget {
   final Color borderColor;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 300),
       padding: padding,
       height: height,
       width: width,

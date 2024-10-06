@@ -36,10 +36,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   Iconsax.arrow_left_outline,
                   color: backArrowColor,
                 ))
-            : leadingIcon != null
-                ? IconButton(
-                    onPressed: leadingOnPressed, icon: Icon(leadingIcon))
-                : null,
+            : null,
         title: title,
         actions: actions,
       ),
@@ -49,3 +46,16 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize => const Size.fromHeight(56);
 }
+// showBackArow
+//             ? IconButton(
+//                 onPressed: () {
+//                   Navigator.of(context).pop();
+//                 },
+//                 icon: Icon(
+//                   Iconsax.arrow_left_outline,
+//                   color: backArrowColor,
+//                 ))
+//             : leadingIcon != null
+//                 ? IconButton(
+//                     onPressed: leadingOnPressed, icon: Icon(leadingIcon))
+//                 : null,

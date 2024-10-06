@@ -3,6 +3,7 @@ import 'package:flutter_application2/core/utils/app_styles.dart';
 
 class AccountListTile extends StatelessWidget {
   const AccountListTile({
+    this.onTap,
     super.key,
     required this.icon,
     this.trailing,
@@ -12,9 +13,14 @@ class AccountListTile extends StatelessWidget {
   final IconData icon;
   final Widget? trailing;
   final String title, subtitle;
+  final Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      contentPadding: const EdgeInsets.symmetric(
+        horizontal: 30,
+      ),
+      onTap: onTap,
       leading: Icon(icon),
       title: Text(title,
           style: AppStyles.styleRalewayBold17
