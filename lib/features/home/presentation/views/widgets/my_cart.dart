@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/widgets/custom_app_bar.dart';
-import 'package:flutter_application2/core/widgets/custom_buttons.dart';
 import 'package:flutter_application2/core/widgets/custom_rounded_container.dart';
-
 import '../../../../../core/utils/app_styles.dart';
 
 class MyCart extends StatelessWidget {
@@ -16,9 +14,9 @@ class MyCart extends StatelessWidget {
           title: Text("My Cart",
               style: AppStyles.styleRalewayBold17.copyWith(fontSize: 22))),
       body: ListView.separated(
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         shrinkWrap: true,
-        itemCount: 4,
+        itemCount: 8,
         separatorBuilder: (BuildContext context, int index) {
           return const SizedBox(
             height: 16,
@@ -28,13 +26,13 @@ class MyCart extends StatelessWidget {
           return Expanded(
             child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
               CustomRoundedContainer(
-                padding: EdgeInsets.symmetric(horizontal: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 height: 110,
-                child: Image.asset("assets/images/NikeWildhorse.png"),
                 color: Theme.of(context).colorScheme.surfaceContainerLow,
                 borderRadius: BorderRadius.circular(12),
+                child: Image.asset("assets/images/NikeWildhorse.png"),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 16,
               ),
               Expanded(
@@ -51,10 +49,10 @@ class MyCart extends StatelessWidget {
                                 color: Theme.of(context)
                                     .colorScheme
                                     .onSurfaceVariant)),
-                        SizedBox(
+                        const SizedBox(
                           width: 2,
                         ),
-                        Icon(
+                        const Icon(
                           shadows: [Shadow(color: Colors.white, blurRadius: 8)],
                           Icons.fiber_manual_record_sharp,
                           color: Colors.black,
@@ -62,7 +60,7 @@ class MyCart extends StatelessWidget {
                       ],
                     ),
                     const Text(
-                      "Nike air shoes",
+                      "Nike air shoes ",
                       overflow: TextOverflow.ellipsis,
                       style: AppStyles.styleRalewayBold17,
                     ),
@@ -94,19 +92,35 @@ class MyCart extends StatelessWidget {
                         ),
                       ],
                     )),
+                    const SizedBox(
+                      height: 8,
+                    ),
                     Row(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            IconButton.filledTonal(
-                              icon: Icon(Icons.remove,
+                            SizedBox(
+                              height: 32,
+                              width: 32,
+                              child: IconButton.filledTonal(
+                                padding: EdgeInsets.zero,
+                                iconSize: 16,
+                                constraints: const BoxConstraints(
+                                  minHeight: 32, // Minimum height of the button
+                                  minWidth: 32, // Minimum width of the button
+                                ),
+                                icon: Icon(
+                                  Icons.remove,
                                   color:
-                                      Theme.of(context).colorScheme.onSurface),
-                              onPressed: () {},
+                                      Theme.of(context).colorScheme.onSurface,
+                                ),
+                                onPressed: () {},
+                              ),
                             ),
-                            const SizedBox(width: 10),
+                            const SizedBox(width: 8),
                             Text(
                               '2',
                               style: TextStyle(
@@ -114,16 +128,30 @@ class MyCart extends StatelessWidget {
                                 color: Theme.of(context).colorScheme.onSurface,
                               ),
                             ),
-                            const SizedBox(width: 10),
-                            IconButton.filledTonal(
-                              icon: Icon(Icons.add,
+                            const SizedBox(width: 8),
+                            SizedBox(
+                              height:
+                                  32, // Ensure height is the same as the button
+                              width:
+                                  32, // Ensure width is the same as the button
+                              child: IconButton.filledTonal(
+                                padding: EdgeInsets.zero,
+                                iconSize: 16,
+                                constraints: const BoxConstraints(
+                                  minHeight: 32, // Minimum height of the button
+                                  minWidth: 32, // Minimum width of the button
+                                ),
+                                icon: Icon(
+                                  Icons.add,
                                   color:
-                                      Theme.of(context).colorScheme.onSurface),
-                              onPressed: () {},
+                                      Theme.of(context).colorScheme.onSurface,
+                                ),
+                                onPressed: () {},
+                              ),
                             ),
                           ],
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Text(
                           r'$134.0',
                           style: AppStyles.stylePoppinsMedium20.copyWith(
