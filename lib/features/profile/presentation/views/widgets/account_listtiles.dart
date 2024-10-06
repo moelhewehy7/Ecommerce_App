@@ -20,38 +20,37 @@ class AccountListTiles extends StatelessWidget {
                 MaterialPageRoute(
                   builder: (context) => const MyAddresses(),
                 ));
-            print("tapped");
           },
           icon: Iconsax.user_outline,
           title: "My Addresses",
           subtitle: "Manage your saved addresses",
         ),
-        AccountListTile(
+        const AccountListTile(
           icon: Iconsax.bag_2_outline,
           title: "My Cart",
           subtitle: "View and edit items in your cart",
         ),
-        AccountListTile(
+        const AccountListTile(
           icon: Iconsax.shop_add_outline,
           title: "My Orders",
           subtitle: "Track and manage your orders",
         ),
-        AccountListTile(
+        const AccountListTile(
           icon: Iconsax.bank_outline,
           title: "Bank Account",
           subtitle: "Link or update your bank account",
         ),
-        AccountListTile(
+        const AccountListTile(
           icon: Iconsax.discount_shape_outline,
           title: "My Coupons",
           subtitle: "View your available coupons",
         ),
-        AccountListTile(
+        const AccountListTile(
           icon: Iconsax.notification_outline,
           title: "Notifications",
           subtitle: "Manage notification settings",
         ),
-        AccountListTile(
+        const AccountListTile(
           icon: Iconsax.security_safe_outline,
           title: "Account Privacy",
           subtitle: "Control your privacy preferences",

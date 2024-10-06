@@ -21,7 +21,7 @@ class CustomRoundedContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
       padding: padding,
       height: height,
       width: width,

@@ -1,7 +1,6 @@
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
-
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../../core/widgets/text_fields.dart';
 
@@ -46,6 +45,6 @@ class CountrySearchField extends StatelessWidget {
           );
         },
         text: "Country",
-        icon: Iconsax.flag_outline);
+        icon: Iconsax.global_outline);
   }
 }
