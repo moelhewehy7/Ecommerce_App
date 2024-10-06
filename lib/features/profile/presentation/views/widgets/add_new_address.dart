@@ -28,7 +28,7 @@ class _AddNewAddressState extends State<AddNewAddress> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           child: Column(
             children: [
               const BasicTextForm(text: "Name", icon: Iconsax.user_outline),
@@ -74,7 +74,7 @@ class _AddNewAddressState extends State<AddNewAddress> {
               ),
               CountrySearchField(countryController: countryController),
               const SizedBox(
-                height: 16,
+                height: 24,
               ),
               CustomFilledButton(
                 text: "Save",

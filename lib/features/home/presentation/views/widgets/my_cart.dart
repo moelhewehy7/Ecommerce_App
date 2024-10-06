@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application2/core/utils/app_styles.dart';
 import 'package:flutter_application2/core/widgets/custom_app_bar.dart';
 import 'package:flutter_application2/core/widgets/custom_buttons.dart';
 import 'package:flutter_application2/core/widgets/custom_rounded_container.dart';
-import '../../../../../core/utils/app_styles.dart';
 
 class MyCart extends StatelessWidget {
   const MyCart({super.key});
