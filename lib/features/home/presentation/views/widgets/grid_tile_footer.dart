@@ -25,8 +25,8 @@ class GridTileFooter extends StatelessWidget {
           children: [
             Text("Nike ",
                 overflow: TextOverflow.ellipsis,
-                style: AppStyles.stylePoppinsMedium14
-                    .copyWith(color: Colors.grey)),
+                style: AppStyles.stylePoppinsMedium14.copyWith(
+                    color: Theme.of(context).colorScheme.onSurfaceVariant)),
             const Icon(
               Icons.fiber_manual_record_sharp,
               color: Colors.black,

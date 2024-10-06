@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/utils/app_styles.dart';
 import 'package:flutter_application2/core/widgets/custom_rounded_container.dart';
+import 'package:icons_plus/icons_plus.dart';
 
 class AddressContainer extends StatelessWidget {
   const AddressContainer({
@@ -27,7 +28,8 @@ class AddressContainer extends StatelessWidget {
               style: AppStyles.styleRalewayBold17,
             ),
             isSelected
-                ? const Icon(Icons.check_circle, color: Colors.blueAccent)
+                ? Icon(Iconsax.tick_circle_bold,
+                    color: Theme.of(context).colorScheme.primary)
                 : const SizedBox()
           ]),
           const SizedBox(
