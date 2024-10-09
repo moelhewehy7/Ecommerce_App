@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/widgets/custom_text_header.dart';
-import 'package:flutter_application2/features/home/presentation/views/widgets/hone_categories_listview.dart';
+import 'package:flutter_application2/features/home/presentation/views/widgets/hone_popular_categories_listview.dart';
 
-class HomeCategoriesSection extends StatelessWidget {
-  const HomeCategoriesSection({
+class HomePopularCategoriesSection extends StatelessWidget {
+  const HomePopularCategoriesSection({
     super.key,
   });
 
@@ -25,7 +25,7 @@ class HomeCategoriesSection extends StatelessWidget {
         ),
         const SizedBox(
           height: 90,
-          child: CategoriesListView(),
+          child: PopularCategoriesListView(),
         ),
       ],
     );

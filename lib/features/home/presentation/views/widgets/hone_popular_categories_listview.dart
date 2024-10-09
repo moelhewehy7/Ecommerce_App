@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'home_categories_item.dart';
+import 'home_popular_categories_item.dart';
 
-class CategoriesListView extends StatelessWidget {
-  const CategoriesListView({
+class PopularCategoriesListView extends StatelessWidget {
+  const PopularCategoriesListView({
     super.key,
   });
   static List<String> categories = [
@@ -30,7 +30,7 @@ class CategoriesListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.only(right: 15),
-            child: HomeCategoriesItem(
+            child: HomePopularCategoriesItem(
               text: categories[index],
             ),
           );

@@ -5,8 +5,8 @@ import 'package:flutter_application2/core/utils/app_styles.dart';
 
 import 'package:icons_plus/icons_plus.dart';
 
-class HomeCategoriesItem extends StatelessWidget {
-  const HomeCategoriesItem({
+class HomePopularCategoriesItem extends StatelessWidget {
+  const HomePopularCategoriesItem({
     super.key,
     required this.text,
   });
