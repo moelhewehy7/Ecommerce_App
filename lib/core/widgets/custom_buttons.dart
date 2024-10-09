@@ -7,7 +7,7 @@ class CustomFilledButton extends StatelessWidget {
     required this.text,
     super.key,
     required this.onPressed,
-    this.fontSize = 19,
+    this.fontSize = 18,
   });
   final String text;
   final void Function()? onPressed;

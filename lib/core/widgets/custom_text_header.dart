@@ -7,10 +7,12 @@ class CustomTextheader extends StatelessWidget {
     required this.title,
     required this.showTextButton,
     required this.titleColor,
+    this.textButtonTitle = "View All",
   });
   final String title;
   final bool showTextButton;
   final Color titleColor;
+  final String textButtonTitle;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -22,7 +24,7 @@ class CustomTextheader extends StatelessWidget {
           TextButton(
               onPressed: () {},
               child: Text(
-                "View All",
+                textButtonTitle,
                 style: AppStyles.styleRalewayeBold14
                     .copyWith(color: Theme.of(context).colorScheme.surfaceTint),
               ))
