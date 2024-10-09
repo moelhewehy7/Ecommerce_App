@@ -65,7 +65,6 @@ class AppStyles {
     fontFamily: "Nunito Sans",
     fontSize: 14,
     fontWeight: FontWeight.w600,
-    color: Color(0xff000000),
     height: 16 / 14,
   );
   static const TextStyle styleRalewayMedium13 = TextStyle(

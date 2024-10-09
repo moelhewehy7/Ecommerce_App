@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/features/profile/presentation/views/widgets/my_addresses.dart';
+import 'package:flutter_application2/features/profile/presentation/views/widgets/my_orders.dart';
 import 'package:icons_plus/icons_plus.dart';
 
 import 'account_list_tile.dart';
@@ -30,7 +31,11 @@ class AccountListTiles extends StatelessWidget {
           title: "My Cart",
           subtitle: "View and edit items in your cart",
         ),
-        const AccountListTile(
+        AccountListTile(
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const MyOrders()));
+          },
           icon: Iconsax.shop_add_outline,
           title: "My Orders",
           subtitle: "Track and manage your orders",
