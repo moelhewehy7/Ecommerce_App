@@ -11,27 +11,36 @@ class GridTileFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          "Nike air shoes",
-          overflow: TextOverflow.ellipsis,
-          style: AppStyles.styleRalewayBold17,
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "Nike air shoes",
+              overflow: TextOverflow.ellipsis,
+              style: AppStyles.styleRalewayBold17,
+            ),
+            const SizedBox(
+              height: 3,
+            ),
+            Row(
+              children: [
+                Text("Nike ",
+                    overflow: TextOverflow.ellipsis,
+                    style: AppStyles.stylePoppinsMedium14.copyWith(
+                        color: Theme.of(context).colorScheme.onSurfaceVariant)),
+                const Icon(
+                  Icons.fiber_manual_record_sharp,
+                  color: Colors.black,
+                )
+              ],
+            ),
+          ],
         ),
         const SizedBox(
-          height: 3,
-        ),
-        Row(
-          children: [
-            Text("Nike ",
-                overflow: TextOverflow.ellipsis,
-                style: AppStyles.stylePoppinsMedium14.copyWith(
-                    color: Theme.of(context).colorScheme.onSurfaceVariant)),
-            const Icon(
-              Icons.fiber_manual_record_sharp,
-              color: Colors.black,
-            )
-          ],
+          height: 10,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
