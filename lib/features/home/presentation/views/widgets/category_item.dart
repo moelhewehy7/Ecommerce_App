@@ -11,8 +11,8 @@ class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomRoundedContainer(
-      height: 170,
-      width: 330,
+      height: 172,
+      width: 360,
       color: Theme.of(context).colorScheme.surfaceBright,
       borderRadius: BorderRadius.circular(12),
       child: Row(
@@ -41,7 +41,9 @@ class CategoryItem extends StatelessWidget {
           const SizedBox(
             width: 6,
           ),
-          const CategoryProductDescription()
+          const Flexible(
+            child: CategoryProductDescription(),
+          )
         ],
       ),
     );

@@ -16,10 +16,12 @@ class CategoryProductDescription extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Column(
+            mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                "Nike air shoes",
+                "Nike air shassdssdasdaasdasdsadsdsdas",
+                maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style: AppStyles.styleRalewayBold17,
               ),
@@ -51,7 +53,7 @@ class CategoryProductDescription extends StatelessWidget {
                 style: AppStyles.styleRalewayBold17.copyWith(fontSize: 20),
                 textAlign: TextAlign.left,
               ),
-              const SizedBox(width: 20),
+              const Spacer(),
               IconButton.filledTonal(
                   style: IconButton.styleFrom(
                       shape: const RoundedRectangleBorder(

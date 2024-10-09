@@ -5,8 +5,8 @@ import 'package:flutter_application2/core/widgets/custom_text_header.dart';
 import 'package:flutter_application2/features/home/presentation/views/widgets/category_listview.dart';
 import 'package:flutter_application2/features/home/presentation/views/widgets/rounded_image.dart';
 
-class Category extends StatelessWidget {
-  const Category({super.key});
+class CategoryView extends StatelessWidget {
+  const CategoryView({super.key});
 
   @override
   Widget build(BuildContext context) {
