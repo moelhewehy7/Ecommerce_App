@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_application2/core/widgets/text_fields.dart';
-import 'package:flutter_application2/features/home/presentation/views/widgets/home_categories_section.dart';
+import 'package:flutter_application2/features/home/presentation/views/widgets/home_popular_categories_section.dart';
 import 'package:flutter_application2/features/home/presentation/views/widgets/hone_appbar.dart';
 
 import 'package:icons_plus/icons_plus.dart';
@@ -37,7 +37,7 @@ class HomeViewHeaderBody extends StatelessWidget {
             ],
           ),
         ),
-        HomeCategoriesSection(),
+        HomePopularCategoriesSection(),
         SizedBox(
           height: 32,
         ),

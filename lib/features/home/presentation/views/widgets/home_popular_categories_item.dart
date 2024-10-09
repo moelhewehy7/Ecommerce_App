@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/utils/app_styles.dart';
+import 'package:flutter_application2/features/home/presentation/views/widgets/category.dart';
 
 import 'package:icons_plus/icons_plus.dart';
 
@@ -16,17 +17,23 @@ class HomePopularCategoriesItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          width: 65,
-          height: 65,
-          decoration: ShapeDecoration(
-              color: Theme.of(context).colorScheme.surfaceBright,
-              shape: CircleBorder()),
-          child: Center(
-              child: Icon(
-            Iconsax.bag_2_outline,
-            color: Theme.of(context).colorScheme.onSurface,
-          )),
+        GestureDetector(
+          onTap: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const Category()));
+          },
+          child: Container(
+            width: 65,
+            height: 65,
+            decoration: ShapeDecoration(
+                color: Theme.of(context).colorScheme.surfaceBright,
+                shape: CircleBorder()),
+            child: Center(
+                child: Icon(
+              Iconsax.bag_2_outline,
+              color: Theme.of(context).colorScheme.onSurface,
+            )),
+          ),
         ),
         SizedBox(
           height: 3,
