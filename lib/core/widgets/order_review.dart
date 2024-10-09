@@ -5,6 +5,7 @@ import 'package:flutter_application2/core/widgets/custom_buttons.dart';
 import 'package:flutter_application2/core/widgets/custom_rounded_container.dart';
 import 'package:flutter_application2/core/widgets/custom_text_header.dart';
 import 'package:flutter_application2/core/widgets/price_summary_section.dart';
+import 'package:flutter_application2/core/widgets/shipping_address_section.dart';
 import 'package:icons_plus/icons_plus.dart';
 import '../utils/app_styles.dart';
 import 'my_cart_body.dart';
@@ -75,7 +76,7 @@ class OrderReview extends StatelessWidget {
                     const SizedBox(
                       height: 16,
                     ),
-                    const PriceSummarySection()
+                    const ShippingAddressSection()
                   ],
                 ),
               ),
@@ -85,12 +86,7 @@ class OrderReview extends StatelessWidget {
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child: CustomFilledButton(
-            text: r"Checkout $245.0",
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const OrderReview()));
-            }),
+        child: CustomFilledButton(text: r"Checkout $245.0", onPressed: () {}),
       ),
     );
   }

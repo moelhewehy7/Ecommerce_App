@@ -7,10 +7,12 @@ class PriceSummaryRow extends StatelessWidget {
     required this.title,
     required this.data,
     this.fontsize,
+    this.fontWeight,
   });
   final String title, data;
 
   final double? fontsize;
+  final FontWeight? fontWeight;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -21,7 +23,8 @@ class PriceSummaryRow extends StatelessWidget {
           style: AppStyles.stylePoppinsMedium14.copyWith(fontSize: fontsize),
         ),
         Text(data,
-            style: AppStyles.stylePoppinsMedium14.copyWith(fontSize: fontsize))
+            style: AppStyles.stylePoppinsMedium14
+                .copyWith(fontSize: fontsize, fontWeight: fontWeight))
       ],
     );
   }

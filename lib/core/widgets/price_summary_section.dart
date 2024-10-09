@@ -33,7 +33,8 @@ class PriceSummarySection extends StatelessWidget {
           height: 12,
         ),
         PriceSummaryRow(
-          fontsize: 17,
+          fontWeight: FontWeight.w800,
+          fontsize: 16,
           title: "Order Total",
           data: r"$110.00",
         ),
