@@ -3,8 +3,8 @@ import 'package:flutter_application2/features/profile/presentation/views/widgets
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../../core/widgets/custom_app_bar.dart';
 
-class MyOrders extends StatelessWidget {
-  const MyOrders({super.key});
+class MyOrdersView extends StatelessWidget {
+  const MyOrdersView({super.key});
 
   @override
   Widget build(BuildContext context) {

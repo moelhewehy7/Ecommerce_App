@@ -6,8 +6,8 @@ import 'package:flutter_application2/core/widgets/custom_app_bar.dart';
 import 'package:flutter_application2/features/profile/presentation/views/widgets/personal_info.dart';
 import 'package:flutter_application2/features/profile/presentation/views/widgets/profile_info.dart';
 
-class ProfileEdit extends StatelessWidget {
-  const ProfileEdit({super.key});
+class ProfileEditView extends StatelessWidget {
+  const ProfileEditView({super.key});
 
   @override
   Widget build(BuildContext context) {

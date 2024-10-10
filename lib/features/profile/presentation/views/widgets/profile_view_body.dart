@@ -3,7 +3,7 @@ import 'package:flutter_application2/core/utils/app_styles.dart';
 import 'package:flutter_application2/core/widgets/custom_app_bar.dart';
 import 'package:icons_plus/icons_plus.dart';
 
-import 'profile_edit.dart';
+import 'profile_edit_view.dart';
 
 class ProfileViewHeaderBody extends StatelessWidget {
   const ProfileViewHeaderBody({
@@ -37,7 +37,7 @@ class ProfileViewHeaderBody extends StatelessWidget {
           trailing: IconButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const ProfileEdit()));
+                    builder: (context) => const ProfileEditView()));
               },
               icon: Icon(
                 Iconsax.edit_outline,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application2/features/profile/presentation/views/widgets/my_addresses.dart';
-import 'package:flutter_application2/features/profile/presentation/views/widgets/my_orders.dart';
+import 'package:flutter_application2/features/profile/presentation/views/widgets/my_addresses_view.dart';
+import 'package:flutter_application2/features/profile/presentation/views/widgets/my_orders_view.dart';
 import 'package:icons_plus/icons_plus.dart';
 
 import 'account_list_tile.dart';
@@ -19,7 +19,7 @@ class AccountListTiles extends StatelessWidget {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const MyAddresses(),
+                  builder: (context) => const MyAddressesView(),
                 ));
           },
           icon: Iconsax.user_outline,
@@ -34,7 +34,7 @@ class AccountListTiles extends StatelessWidget {
         AccountListTile(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const MyOrders()));
+                MaterialPageRoute(builder: (context) => const MyOrdersView()));
           },
           icon: Iconsax.shop_add_outline,
           title: "My Orders",

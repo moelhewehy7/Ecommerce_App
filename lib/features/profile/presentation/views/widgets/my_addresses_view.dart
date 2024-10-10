@@ -6,14 +6,14 @@ import 'package:icons_plus/icons_plus.dart';
 import '../../../../../core/widgets/custom_app_bar.dart';
 import 'add_new_address.dart';
 
-class MyAddresses extends StatefulWidget {
-  const MyAddresses({super.key});
+class MyAddressesView extends StatefulWidget {
+  const MyAddressesView({super.key});
 
   @override
-  State<MyAddresses> createState() => _MyAddressesState();
+  State<MyAddressesView> createState() => _MyAddressesViewState();
 }
 
-class _MyAddressesState extends State<MyAddresses> {
+class _MyAddressesViewState extends State<MyAddressesView> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
