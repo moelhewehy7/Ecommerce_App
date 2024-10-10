@@ -17,7 +17,7 @@ class CustomGridView extends StatelessWidget {
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           mainAxisExtent: height,
-          mainAxisSpacing: 5,
+          mainAxisSpacing: 10,
           crossAxisSpacing: 15,
           crossAxisCount: 2),
       itemCount: itemCount,

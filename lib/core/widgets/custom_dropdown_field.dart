@@ -4,10 +4,15 @@ import 'package:icons_plus/icons_plus.dart';
 class CustomDropDownField extends StatelessWidget {
   const CustomDropDownField({
     super.key,
-    required this.sortItems,
   });
 
-  final List<String> sortItems;
+  static const List<String> sortItems = <String>[
+    "Name",
+    "Higher Price",
+    "Lower Price",
+    "Newest",
+    "Popularity"
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +20,7 @@ class CustomDropDownField extends StatelessWidget {
       onChanged: (value) {},
       value: sortItems[0],
       decoration: InputDecoration(
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
         prefixIcon: const Icon(
           Iconsax.sort_outline,
         ),
@@ -25,7 +30,7 @@ class CustomDropDownField extends StatelessWidget {
                 .colorScheme
                 .onSurfaceVariant, // Change this to the desired color
           ),
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(12),
         ),
       ),
       items: List.generate(

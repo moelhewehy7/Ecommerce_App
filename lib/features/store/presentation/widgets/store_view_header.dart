@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application2/core/widgets/custom_grid_view.dart';
 import 'package:flutter_application2/core/widgets/custom_text_header.dart';
 import 'package:flutter_application2/core/widgets/text_fields.dart';
+import 'package:flutter_application2/features/store/presentation/widgets/all_brands_view.dart';
 import 'package:flutter_application2/features/store/presentation/widgets/colored_tab_bar.dart';
 import 'package:flutter_application2/features/store/presentation/widgets/feauterd_brand_item.dart';
 import 'package:icons_plus/icons_plus.dart';
@@ -39,6 +40,12 @@ class StoreViewHeader extends StatelessWidget {
               height: 32,
             ),
             CustomTextheader(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AllBrandsView()));
+                },
                 title: "Featured brands",
                 showTextButton: true,
                 titleColor: Theme.of(context).colorScheme.onSurface),
