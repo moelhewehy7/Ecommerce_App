@@ -5,6 +5,7 @@ class CustomTextheader extends StatelessWidget {
   const CustomTextheader({
     super.key,
     required this.title,
+    this.onPressed,
     required this.showTextButton,
     required this.titleColor,
     this.textButtonTitle = "View All",
@@ -13,6 +14,7 @@ class CustomTextheader extends StatelessWidget {
   final bool showTextButton;
   final Color titleColor;
   final String textButtonTitle;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -22,7 +24,7 @@ class CustomTextheader extends StatelessWidget {
             style: AppStyles.styleRalewayeBold20.copyWith(color: titleColor)),
         if (showTextButton)
           TextButton(
-              onPressed: () {},
+              onPressed: onPressed,
               child: Text(
                 textButtonTitle,
                 style: AppStyles.styleRalewayeBold14
