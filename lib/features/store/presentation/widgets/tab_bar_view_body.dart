@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/widgets/custom_text_header.dart';
-import '../../../home/presentation/views/widgets/home_view_popular_products.dart';
+import '../../../home/presentation/views/widgets/popular_products.dart';
 import 'tab_bar_view_header.dart';
 
 class TabBarViewBody extends StatelessWidget {
@@ -36,7 +36,7 @@ class TabBarViewBody extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          const HomeViewPopularProducts(),
+          const PopularProducts(),
         ],
       ),
     );
