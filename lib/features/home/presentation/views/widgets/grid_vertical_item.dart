@@ -4,9 +4,11 @@ import 'package:flutter_application2/core/widgets/custom_rounded_container.dart'
 import 'package:flutter_application2/features/home/presentation/views/widgets/grid_tile_footer.dart';
 import 'package:flutter_application2/features/home/presentation/views/widgets/grid_tile_header.dart';
 
-class GridVerticalItem extends StatelessWidget {
-  const GridVerticalItem({super.key});
+import '../../../../../core/models/product_model.dart';
 
+class GridVerticalItem extends StatelessWidget {
+  const GridVerticalItem({super.key, required this.productModel});
+  final ProductModel productModel;
   @override
   Widget build(BuildContext context) {
     return Column(children: [
@@ -27,20 +29,23 @@ class GridVerticalItem extends StatelessWidget {
                   bottomRight: Radius.circular(24)),
               padding: const EdgeInsets.all(8),
               child: GridTile(
-                  header: const GridTileHeader(),
+                  header: GridTileHeader(
+                    productModel: productModel,
+                  ),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(12),
-                    child: Image.asset(
-                      "assets/images/NikeWildhorse.png",
-                    ),
+                    child: Image.asset(productModel.imageUrl),
                   )),
             ),
             const SizedBox(
               height: 6,
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(left: 8),
-              child: GridTileFooter(),
+              child: GridTileFooter(
+                  title: productModel.title,
+                  brand: productModel.brand,
+                  price: productModel.price),
             )
           ],
         ),

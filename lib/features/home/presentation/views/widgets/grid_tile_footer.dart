@@ -2,12 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 
 import '../../../../../core/utils/app_styles.dart';
+import 'package:intl/intl.dart';
 
 class GridTileFooter extends StatelessWidget {
-  const GridTileFooter({
+  GridTileFooter({
     super.key,
+    required this.title,
+    required this.brand,
+    required this.price,
   });
-
+  final String title, brand;
+  final double price;
+  final currencyFormatter = NumberFormat.currency(symbol: '\$');
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -17,8 +23,8 @@ class GridTileFooter extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              "Nike air shoes",
+            Text(
+              title,
               overflow: TextOverflow.ellipsis,
               style: AppStyles.styleRalewayBold17,
             ),
@@ -27,7 +33,7 @@ class GridTileFooter extends StatelessWidget {
             ),
             Row(
               children: [
-                Text("Nike ",
+                Text("$brand ",
                     overflow: TextOverflow.ellipsis,
                     style: AppStyles.stylePoppinsMedium14.copyWith(
                         color: Theme.of(context).colorScheme.onSurfaceVariant)),
@@ -46,7 +52,7 @@ class GridTileFooter extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              r"$32,00",
+              currencyFormatter.format(price),
               style: AppStyles.styleRalewayBold17.copyWith(fontSize: 20),
               textAlign: TextAlign.left,
             ),

@@ -3,14 +3,15 @@ import 'package:flutter/material.dart';
 class CustomGridView extends StatelessWidget {
   const CustomGridView({
     super.key,
-    required this.child,
     this.height = 300,
     this.physics = const NeverScrollableScrollPhysics(),
     this.itemCount = 6,
+    required this.itemBuilder,
   });
-  final Widget child;
+
   final double height;
   final ScrollPhysics? physics;
+  final Widget? Function(BuildContext, int) itemBuilder;
   final int itemCount;
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class CustomGridView extends StatelessWidget {
       itemCount: itemCount,
       shrinkWrap: true,
       physics: physics,
-      itemBuilder: (itemBuilder, index) => child,
+      itemBuilder: itemBuilder,
     );
   }
 }

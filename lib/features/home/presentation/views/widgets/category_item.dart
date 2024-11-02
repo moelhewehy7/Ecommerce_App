@@ -30,7 +30,7 @@ class CategoryItem extends StatelessWidget {
                 bottomRight: Radius.circular(24)),
             padding: const EdgeInsets.all(8),
             child: GridTile(
-                header: const GridTileHeader(),
+                header: Text("asfdasf"),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: Image.asset(

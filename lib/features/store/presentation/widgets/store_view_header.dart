@@ -7,6 +7,8 @@ import 'package:flutter_application2/features/store/presentation/widgets/colored
 import 'package:flutter_application2/features/store/presentation/widgets/feauterd_brand_item.dart';
 import 'package:icons_plus/icons_plus.dart';
 
+import 'brand_view.dart';
+
 class StoreViewHeader extends StatelessWidget {
   const StoreViewHeader({
     super.key,
@@ -52,8 +54,20 @@ class StoreViewHeader extends StatelessWidget {
             const SizedBox(
               height: 12,
             ),
-            const CustomGridView(
-                itemCount: 4, height: 80, child: FeauterdBrandItem()),
+            CustomGridView(
+              itemCount: 4,
+              height: 80,
+              itemBuilder: (p0, p1) {
+                return GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const BrandView()));
+                    },
+                    child: const FeauterdBrandItem());
+              },
+            ),
           ],
         ),
       ),

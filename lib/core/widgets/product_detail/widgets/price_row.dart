@@ -12,7 +12,7 @@ class PriceRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const DiscountBadge(),
+        Text("asdasd"),
         const SizedBox(
           width: 8,
         ),

@@ -21,17 +21,20 @@ class AllBrandsView extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: CustomGridView(
-            itemCount: 20,
-            height: 90,
-            physics: const AlwaysScrollableScrollPhysics(),
-            child: GestureDetector(
+          itemCount: 20,
+          height: 90,
+          physics: const AlwaysScrollableScrollPhysics(),
+          itemBuilder: (context, index) {
+            return GestureDetector(
                 onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => const BrandView()));
                 },
-                child: const FeauterdBrandItem())),
+                child: const FeauterdBrandItem());
+          },
+        ),
       ),
     );
   }
